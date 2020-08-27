@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JokesTab">
+       <LinearLayout android:id="@+id/linearLayout"
+           android:layout_width="match_parent"
+           android:layout_height="400dp">
+
+           <ListView
+               android:id="@+id/list_view"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"></ListView>
+       </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        >
+
+        <EditText
+            android:id="@+id/txtCount"
+            android:layout_width="172dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="26dp"
+            android:hint="Count"
+            android:inputType="number"
+            android:textColorHint="#00BCD4"
+            app:layout_constraintBottom_toTopOf="@+id/btnReload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></EditText>
+
+        <Button
+            android:id="@+id/btnReload"
+            android:layout_width="96dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="86dp"
+            android:background="@drawable/btn_style"
+            android:text="RELOAD"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
